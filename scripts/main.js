@@ -44,13 +44,35 @@ if(!localStorage.getItem('name')) {
     setUserName();//设置textContent属性
 } else {
     let storedName = localStorage.getItem('name');//如果存在name数据，调用getItem()获取保存的名字
-    myHeading.textContent = 'Mozilla，' + storedName;
+    myHeading.textContent = 'Hello，' + storedName;
 }
 //为按钮设置onclick事件处理器，调用myButton，click按钮时运行setUserName()函数
-myButton.onclick = function (){
+myButton.onclick = function(){
     setUserName();
 }
+/*
+const list = document.createElement('ul');
+const info = document.createElement('p');
+const html = document.querySelector('html');
 
+info.textContent = '以下是一个动态列表。点击列表外任意位置可添加新的列表项。点击已有的列表项可修改内容。';
+
+document.body.appendChild(info);
+document.body.appendChild(list);
+
+html.onclick = function() {
+    const listItem = document.createElement('li');
+    const listContent = prompt('希望列表中显示什么内容？');
+    listItem.textContent = listContent;
+    list.appendChild(listItem);
+
+    listItem.onclick = function(e) {
+        e.stopPropagation();
+        const listContent = prompt('为列表项输入新的内容');
+        this.textContent = listContent;
+    };
+};
+ */
 
 
 

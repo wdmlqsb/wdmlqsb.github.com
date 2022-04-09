@@ -1,26 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!DOCTYPE html> <!--文档声明-->
+<html lang="zh-CN"> <!--此元素包裹了整个完整的页面，是一个根元素-->
+<head> <!--是一个容器，包含在html页面中但不想显示出来的内容，包括CSS样式，字符集声明，搜索结果中出现的关键字和页面描述等-->
+    <meta charset="UTF-8"> <!--用meta添加描述数据的数据---元数据-这个指定了文档的字符编码-->
+    <meta name="author" content="Yuru">
+    <meta name="description" content="a small small exercise.">
     <title>测试页面</title>
-    <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet"> <!--rel="stylesheet"表明这是文档的样式表，而href包含了样式表文件的路径-->
     <link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css">
 </head>
-<body>
-    <h1>aaaa</h1>
+<body> <!--包含了访问页面时显示在页面上的内容-->
+    <h2 id="document snippet">链接到的文档片段</h2>
+    <h1>这是一个顶级标题</h1>
     <img src="images/firefox.jpg" alt="我的测试页面">
     <p>我的狗狗脾气<strong>暴躁</strong>:)</p>
     <p>Mozilla 是一个全球社区，这里聚集着来自五湖四海的</p>
-
+    <span style="font-size: 32px; margin: 21px 0;">这是顶级标题吗？</span> <!--使用css使其看起来像一个顶级标题-->
+    <p>欲练<a href="https://zh.wikipedia.org/zh-hans/葵花宝典" title="宝典简介">宝典</a>，需</p>
+    <p>日语实例: <span lang="jp">ご飯が熱い。</span>.</p><!--span作为内联元素，封装起来对内容定义样式，lang属性为站点设定语言-->
     <ul>
         <li>技术人员</li>
         <li>思考者</li>
         <li>建造者</li>
     </ul>
+    <p><a href="#document snippet">点击跳到文档片段</a>.</p>
+    <!-- 使用disabled属性来防止终端用户输入文本到输入框中 -->
+    <input type="text" disabled>
+    <!-- 下面这个输入框没有disabled属性，所以用户可以向其中输入 -->
+    <input type="text">
 
     <p>我们致力于……<a href="https://www.mozilla.org/zh-CN/about/manifesto/">Mozilla 宣言</a></p>
+<!-- 学名 -->
+<p>
+    红喉北蜂鸟（学名：<i>Archilocus colubris</i>）
+    是北美东部最常见的蜂鸟品种。
+</p>
+
+<!-- 舶来词 -->
+<p>
+    菜单上有好多舶来词汇，比如 <i lang="uk-latn">vatrushka</i>（东欧乳酪面包）,
+    <i lang="id">nasi goreng</i>（印尼炒饭）以及<i lang="fr">soupe à l'oignon</i>（法式洋葱汤）。
+</p>
+
+<!-- 已知的错误书写 -->
+<p>
+    总有一天我会改掉写<u style="text-decoration-line: underline; text-decoration-style: wavy;">措字</u>的毛病。
+</p>
+
+<!-- 在一组指令中突出显示关键字 -->
+<ol>
+    <li>
+        <b>切</b>下两片面包，
+    </li>
+    <li>
+        在两片面包中间<b>夹入</b>一片西红柿和一片生菜叶。
+    </li>
+</ol>
+<p>我创建了一个指向
+    <a href="https://www.mozilla.org/zh-CN/"
+       title="了解 Mozilla 使命以及如何参与贡献的最佳站点。">Mozilla 主页</a>
+    的超链接。
+</p>
+
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+    <p>块引用：The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+        Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+</blockquote>
+<p>行内引用：The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+    for short quotations that don't require paragraph breaks.</q></p>
+<address>
+    <p>Chris Mills, Manchester, The Grim North, UK</p>
+</address>
+<p><a href="document-structure.html">文档结构.html</a></p>
     <button>切换用户</button>
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/main.js" defer></script> <!--确保在加载脚本之前浏览器已经解析了HTML内容，并不是空元素-->
 </body>
 </html>
 
